@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+:root {
+    --clr-black: #121212;
+    --clr-white: #FAFAFA;
+    --clr-gray: #9E9E9E;
+    --clr-blue: #347FE1;
+
+    --wgt-title: 900;
+    --wgt-subt: 700;
+    --wgt-txt: 400;
+
+    --fnt: "Helvetica", sans-serif;
+}
+
+*::selection {
+    background: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+    background-color: var(--clr-white);
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* SCROLL ANIMATIONS */
+
+.reveal-c {
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal-c.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.reveal {
+    transform: translateX(-60px);
+    opacity: 0;
+    transition: .7s all ease;
+}
+
+.reveal.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* LANDING */
+
+.landing {
+    width: 100vw;
+    height: 96vh;
+}
+
+.logo {
+    width: 15vw;
+    margin-top: 5vh;
+    margin-left: 50vw;
+    transform: translateX(-50%);
+}
+
+.title {
+    font-family: var(--fnt);
+    font-weight: var(--wgt-subt);
+    font-size: 3.7rem;
+    letter-spacing: 2px;
+    margin: 10vh 5vw 0;
+    line-height: 1;
+    color: var(--clr-black);
+}
+
+.desc {
+    width: 35vw;
+    margin: 6vh 5vw;
+    font-family: var(--fnt);
+    font-weight: var(--wgt-txt);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.steps {
+    width: 40vw;
+    font-family: var(--fnt);
+    font-weight: var(--wgt-txt);
+    font-size: 1.6rem;
+    position: absolute;
+    top: 51vh;
+    right: 4vw;
+    transform: translateY(-50%);
+    line-height: 2.5;
+    color: var(--clr-black);
+}
+
+b {
+    padding-right: .5rem;
+}
+
+.left {
+    width: 50vw;
+    position: absolute;
+    top: 51vh;
+    left: 3vw;
+    transform: translateY(-50%);
+}
+
+/* SCREENSHOTS */
+
+.screenshots {
+    height: 104vh;
+    width: 100vw;
+    background: var(--clr-black);
+    text-align: center;
+}
+
+.screen {
+    position:absolute;
+    font-weight: var(--wgt-subt);
+    font-family: var(--fnt);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    width: 100vw;
+}
+
+.screen-title {
+    color: var(--clr-white);
+    bottom: -22vh;
+    font-size: 1.8rem;    
+}
+.screen-subtitle {
+    color: var(--clr-gray);
+    bottom: -27.5vh;
+    letter-spacing: 1px;
+}
+.screen-img {
+    height: 60vh;
+    margin: 35vh 0 5vh;
+    filter: drop-shadow(0 10px 10px rgba(255, 255, 255, .2));
+}
+
+/* DOWNLOAD */
+
+.download {
+    height: 92vh;
+    width: 100vw;
+    background: var(--clr-white);
+}
+
+.download-title {
+    position: absolute;
+    bottom: -133vh;
+    width: 100vw;
+    text-align: center;
+    font-size: 3rem;
+    font-family: var(--fnt);
+    font-weight: var(--wgt-subt);
+    letter-spacing: 1.5px;
+    text-shadow: 0 7px 10px rgba(0, 0, 0, .1);
+}
+
+.download-icons {
+    position: absolute;
+    bottom: -168vh;
+    width: 50vw;
+    margin: 0 25vw;
+    font-size: 8vw;
+    display: flex;
+    justify-content: space-around;
+    color: var(--clr-black);
+}
+
+.download-icon {
+    transition: .5s all ease;
+    opacity: .9;
+}
+
+.download-icon:hover {
+    transition: .5s all ease;
+    transform: translateY(-5px);
+    cursor: pointer;
+    opacity: 1;
+}
+
+i {
+    font-style: normal;
+    opacity: .8;
+}
+
+/* FOOTER */
+
+footer {
+    height: 8vh;
+    background: var(--clr-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    margin-left: 2vw;
+}
+
+.socials {
+    margin-right: 2vw;
+}
+
+.link, .social-icon {
+    transition: all .2s ease;
+    font-family: var(--fnt);
+    color: var(--clr-black);
+    font-weight: var(--wgt-txt);
+    text-decoration: none;
+    padding: 0 .8vw;
+    font-size: 1.1rem;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+}
+
+.social-icon:hover {
+    transition: all .2s ease;
+    cursor: pointer;
+    color: var(--clr-blue);
+}
+
+.link:hover {
+    transition: all .2s ease;
+    color: var(--clr-blue);
+    text-decoration: underline;
+}
